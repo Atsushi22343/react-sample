@@ -90,3 +90,15 @@ footer {
   font-size: 2rem;
   font-weight: bold;
 } */
+
+.left{
+  text-align: left;
+  padding-left: 35%;
+}
+
+.square li{
+  list-style: square;
+  margin: auto;
+  text-align: left;
+  width: 29%;
+}

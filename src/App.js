@@ -35,15 +35,18 @@ function App() {
         </p>
       <section className="About">
         <h2>About Me</h2>
-        <p>
+        <p class="left">
           <b><font color = "blue">Education</font></b>: Graduate School of Engineering, Nagoya University, Nagoya, Japan
-          <b><font color = "blue">Skills</font></b>: 
-          <ul class="square">
-            <li>  リストの１つ目</li>
-            <li>  リストの2つ目</li>
-            <li>  リストの3つ目</li>
-          </ul>
         </p>
+        <p class="left">
+          <b><font color = "blue">Skills</font></b>: Described below
+        </p>
+        <ul class="square">
+          <li>OS: Windows, MacOS, Amazon Linux, Ubuntu</li>
+          <li>Language: C, Python, JavaScript(jQuery, React), HTML/CSS, C#, C++, PHP, R, Shell script</li>
+          <li>Framework: Django, Laravel</li>
+          <li>Other: Unity, Blender</li>
+        </ul>
       </section>
       <section className="Projects">
         <h2>Projects</h2>
