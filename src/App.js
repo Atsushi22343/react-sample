@@ -36,7 +36,13 @@ function App() {
       <section className="About">
         <h2>About Me</h2>
         <p>
-          <b><font color = "blue">Education</font></b>: Nagoya University, Japan.
+          <b><font color = "blue">Education</font></b>: Graduate School of Engineering, Nagoya University, Nagoya, Japan
+          <b><font color = "blue">Skills</font></b>: 
+          <ul class="square">
+            <li>  リストの１つ目</li>
+            <li>  リストの2つ目</li>
+            <li>  リストの3つ目</li>
+          </ul>
         </p>
       </section>
       <section className="Projects">
