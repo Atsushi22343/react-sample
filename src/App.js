@@ -2,21 +2,24 @@ import React, { useState } from 'react';
 import './App.css';
 import alexa from "./images/alexa_l.jpg";
 import react_logo from "./images/logo.svg";
+import project1 from "./videos/interface.mp4";
 import icon from "./images/icon.png";
 
 function App() {
   const [projects, setProjects] = useState([
     {
       id: 1,
-      title: 'Project 1',
-      description: 'Description of Project 1.',
-      image: react_logo,
+      title: 'Work 1',
+      description: 'This project is a web application that allows users to interact with and operate a displayed CG avatar. This application is developed using Django(Python) and HTML/CSS, JavaScript, and the avatar part was implemented in Unity(using C#). This is not deployed, but a paper describing the results of a study using this application has been published.',
+      link: 'https://doi.org/10.11517/pjsai.JSAI2023.0_2K4GS903',
+      // image: react_logo,
+      video: project1,
     },
     {
       id: 2,
-      title: 'Project 2',
+      title: 'Work 2',
       description: 'Description of Project 2.',
-      image: alexa,
+      // image: alexa,
     },
     // Add more projects as needed
   ]);
@@ -62,7 +65,7 @@ function App() {
         </div>
       </section>
       <section className="Projects">
-        <h2>Projects</h2>
+        <h2>My Works</h2>
         {projects.map((project, index) => (
           <div
             key={project.id}
@@ -72,8 +75,14 @@ function App() {
             <h3>{project.title}</h3>
             <div className='twocols'>
               <div class="twocols-container w-container">
-                <div className='twocols-clumn'>{project.description}</div>
-                <div className='twocols-clumn'><img src={project.image} className="image" alt="image" /></div>
+                <div className='twocols-clumn'>
+                  {project.description}<br/><br/>
+                  <a target="_blank" href={project.link}>Link</a>
+                </div>
+                <div className='twocols-clumn'>
+                  {/* <img src={project.image} className="image" alt="image1" /> */}
+                  <video src={project.video} className="video" controls alt="video1" />
+                </div>
               </div>
             </div>
           </div>

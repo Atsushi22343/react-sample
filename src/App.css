@@ -110,7 +110,12 @@ footer {
 
 .image{
   margin: auto;
-  width: 90%;
+  width: 95%;
+}
+
+.video{
+  margin: auto;
+  width: 95%;
 }
 
 .inline{
