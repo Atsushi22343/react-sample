@@ -73,7 +73,7 @@ function App() {
             <div className='twocols'>
               <div class="twocols-container w-container">
                 <div className='twocols-clumn'>{project.description}</div>
-                <div className='twocols-clumn'><img src={project.image} alt="image" /></div>
+                <div className='twocols-clumn'><img src={project.image} className="image" alt="image" /></div>
               </div>
             </div>
           </div>
