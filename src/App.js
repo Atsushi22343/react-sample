@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
+import alexa from "./images/alexa_l.jpg";
+import react_logo from "./images/logo.svg";
+import icon from "./images/icon.png";
 
 function App() {
   const [projects, setProjects] = useState([
@@ -7,11 +10,13 @@ function App() {
       id: 1,
       title: 'Project 1',
       description: 'Description of Project 1.',
+      image: react_logo,
     },
     {
       id: 2,
       title: 'Project 2',
       description: 'Description of Project 2.',
+      image: alexa,
     },
     // Add more projects as needed
   ]);
@@ -33,20 +38,28 @@ function App() {
           <span>portfolio</span>
           <span>!</span>
         </p>
-      <section className="About">
-        <h2>About Me</h2>
-        <p class="left">
-          <b><font color = "blue">Education</font></b>: Graduate School of Engineering, Nagoya University, Nagoya, Japan
-        </p>
-        <p class="left">
-          <b><font color = "blue">Skills</font></b>: Described below
-        </p>
-        <ul class="square">
-          <li>OS: Windows, MacOS, Amazon Linux, Ubuntu</li>
-          <li>Language: C, Python, JavaScript(jQuery, React), HTML/CSS, C#, C++, PHP, R, Shell script</li>
-          <li>Framework: Django, Laravel</li>
-          <li>Other: Unity, Blender</li>
-        </ul>
+      <section class="twocols">
+        <div class="twocols-container w-container">
+          <div class="twocols-column">
+            <img src={icon} className="icon"/>
+          </div>
+
+          <div class="twocols-column">
+            <h2>About Me</h2>
+              <p class="left">
+                <b><font color = "blue">Education</font></b>:<a target="_blank" href="https://www.engg.nagoya-u.ac.jp/?lang=en"> Graduate School of Engineering, Nagoya University</a>, Nagoya, Japan
+              </p>
+              <p class="left">
+                <b><font color = "blue">Skills</font></b>: Described below
+              </p>
+              <ul class="square">
+                <li>OS: Windows, MacOS, Amazon Linux, Ubuntu</li>
+                <li>Language: C, Python, JavaScript(jQuery, React), HTML/CSS, C#, C++, PHP</li>
+                <li>Framework: Django, Laravel</li>
+                <li>Other: Unity, Blender</li>
+              </ul>
+          </div>
+        </div>
       </section>
       <section className="Projects">
         <h2>Projects</h2>
@@ -57,7 +70,12 @@ function App() {
             onMouseEnter={() => handleProjectHover(index)}
           >
             <h3>{project.title}</h3>
-            <p>{project.description}</p>
+            <div className='twocols'>
+              <div class="twocols-container w-container">
+                <div className='twocols-clumn'>{project.description}</div>
+                <div className='twocols-clumn'><img src={project.image} alt="image" /></div>
+              </div>
+            </div>
           </div>
         ))}
       </section>
