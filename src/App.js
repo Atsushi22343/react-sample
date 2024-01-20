@@ -9,7 +9,7 @@ function App() {
   const [projects, setProjects] = useState([
     {
       id: 1,
-      title: 'Work 1',
+      title: 'Interactive Live Streaming',
       description: 'This project is a web application that allows users to interact with and operate a displayed CG avatar. This application is developed using Django(Python) and HTML/CSS, JavaScript, and the avatar part was implemented in Unity(using C#). This is not deployed, but a paper describing the results of a study using this application has been published.',
       link: 'https://doi.org/10.11517/pjsai.JSAI2023.0_2K4GS903',
       // image: react_logo,
@@ -17,7 +17,7 @@ function App() {
     },
     {
       id: 2,
-      title: 'Work 2',
+      title: 'Project 2',
       description: 'Description of Project 2.',
       // image: alexa,
     },
@@ -50,6 +50,9 @@ function App() {
           <div class="twocols-column">
             <h2>About Me</h2>
               <p class="left">
+                <b><font color = "blue">Birthday</font></b>: 1999/05/16
+              </p>
+              <p class="left">
                 <b><font color = "blue">Education</font></b>:<a target="_blank" href="https://www.engg.nagoya-u.ac.jp/?lang=en"> Graduate School of Engineering, Nagoya University</a>, Nagoya, Japan
               </p>
               <p class="left">
@@ -65,7 +68,7 @@ function App() {
         </div>
       </section>
       <section className="Projects">
-        <h2>My Works</h2>
+        <h2>Projects</h2>
         {projects.map((project, index) => (
           <div
             key={project.id}
