@@ -3,6 +3,7 @@ import './App.css';
 import alexa from "./images/alexa_l.jpg";
 import react_logo from "./images/logo.svg";
 import project1 from "./videos/interface.mp4";
+import project2 from "./videos/notemark_demo.mp4";
 import icon from "./images/icon.png";
 
 function App() {
@@ -10,16 +11,16 @@ function App() {
     {
       id: 1,
       title: 'Interactive Live Streaming',
-      description: 'This project is a web application that allows users to interact with and operate a displayed CG avatar. This application is developed using Django(Python) and HTML/CSS, JavaScript, and the avatar part was implemented in Unity(using C#). This is not deployed, but a paper describing the results of a study using this application has been published.',
+      description: 'This project is a web application that allows users to interact with and operate a displayed CG avatar. This application is developed using Django(Python) and HTML/CSS, JavaScript, and the avatar part was implemented in Unity(using C#). This is not deployed, but a paper describing the results of a study using this application has been published(Link).',
       link: 'https://doi.org/10.11517/pjsai.JSAI2023.0_2K4GS903',
-      // image: react_logo,
       video: project1,
     },
     {
       id: 2,
-      title: 'Project 2',
-      description: 'Description of Project 2.',
-      // image: alexa,
+      title: 'Note Taking App',
+      description: 'This project is a minimal note taking app with out-of-the-box markdown support. This application is developed using React(TypeScript). This has been published on my GitHub Page(Link).',
+      link: 'https://github.com/Atsushi22343/NoteMark2/',
+      video: project2,
     },
     // Add more projects as needed
   ]);
@@ -60,7 +61,7 @@ function App() {
               </p>
               <ul class="square">
                 <li>OS: Windows, MacOS, Amazon Linux, Ubuntu</li>
-                <li>Language: C, Python, JavaScript(jQuery, React), HTML/CSS, C#, C++, PHP</li>
+                <li>Language: C, Python, JavaScript(jQuery, React), HTML/CSS, C#, C++, PHP, TypeScript</li>
                 <li>Framework: Django, Laravel</li>
                 <li>Other: Unity, Blender</li>
               </ul>
@@ -83,8 +84,7 @@ function App() {
                   <a target="_blank" href={project.link}>Link</a>
                 </div>
                 <div className='twocols-clumn'>
-                  {/* <img src={project.image} className="image" alt="image1" /> */}
-                  <video src={project.video} className="video" controls alt="video1" />
+                  <video src={project.video} className="video" controls alt="video" />
                 </div>
               </div>
             </div>
